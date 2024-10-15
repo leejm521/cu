@@ -873,12 +873,20 @@ body{
     width: 100%;
     height: 1280px;
     margin: 0 auto;
-    background-image: url(images/cu_storebg_202203_03.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
     position: relative;
     cursor: pointer;
 }
+#section .storebg .bg_fade li{
+    width: 100%; height: 1280px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0; top: 0;
+}
+#section .storebg .bg_fade li:nth-child(1){background-image: url(images/cu_storebg_202203_03.jpg);}
+#section .storebg .bg_fade li:nth-child(2){background-image: url(images/cu_storebg_202203_01.jpg);}
+#section .storebg .bg_fade li:nth-child(3){background-image: url(images/cu_storebg_202203_02.jpg);}
+#section .storebg .bg_fade li:nth-child(4){background-image: url(images/cu_storebg_202207_03.png);}
 #section .storebg .introduce{
     position: absolute;
     left: 100px;
@@ -890,7 +898,39 @@ body{
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.4);
 }
-
+#section .storebg .indicator{
+    width: 70px;
+    /* border: 1px solid red; */
+    display: flex; justify-content: space-around;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    bottom: 30px;
+    z-index: 500;
+}
+#section .storebg .indicator li{
+    width: 11px; height: 11px;
+    background-color: white;
+    border-radius: 50px;
+}
+#section .storebg .indicator li.on{
+    background-color: #37d243;
+}
+#section .storebg .cursor p{
+    width: 8px; height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+}
+#section .storebg .cursor .prev{
+    transform: rotate(-135deg);
+    left: 47%;
+}
+#section .storebg .cursor .next{
+    transform: rotate(45deg);
+    right: 47%;
+}
 /* --------------------------------------------------------- */
 
 #footer{
